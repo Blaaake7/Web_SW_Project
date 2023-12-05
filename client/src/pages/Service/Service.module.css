@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.serviceWrapper {
+    max-width: 200px;
+    padding: 32px;
+}

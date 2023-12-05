@@ -1,0 +1,13 @@
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #CCCCCC;
+    padding: 50px;
+}
+
+.serviceWrapper {
+    max-width: 200px;
+    padding: 32px;
+}
