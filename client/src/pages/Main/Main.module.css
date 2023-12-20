@@ -4,19 +4,19 @@
     background-size: cover;
     background-position: center;
     /* 다른 필요한 스타일 속성들을 추가할 수 있습니다. */
-    width: 80%;
+    width: 87%;
     height: 82vh;
     filter: blur(6px);
     margin: auto;
     position: relative;
 }
 
-h3 {
+.mainHeader {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -4%);
-    color: #333333;
+    color: #EEEEEE;
     text-align: center;
     font-size: 40px;
 }

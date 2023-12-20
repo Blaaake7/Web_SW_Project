@@ -1,24 +1,22 @@
 .wrapper {
     display: flex;
-    justify-content: space-around;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    justify-content: space-between;
+    padding: 12px 130px;
     background-color: #FAF0E6;
     margin-bottom: 30px;
 }
 
 .leftBox {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
-    color: #666666;
+    color: #222222;
 }
 
 .rightBox {
     display: flex;
-    font-weight: 550;
+    font-weight: 530;
     font-size: 19px;
-    color: #666666;
     align-items: center;
 }
 

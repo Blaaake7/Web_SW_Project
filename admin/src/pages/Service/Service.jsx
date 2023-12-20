@@ -1,116 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './Service.module.css'
+import { useEffect } from 'react'
 import axios from 'axios'
-import CourseInfo from './CourseInfo/CourseInfo';
-import CourseModal from './CourseInfo/CourseModal';
+import { useNavigate } from 'react-router-dom'
+
+
 export default function Service() {
+  
+    const navigate = useNavigate();
 
-  const [serviceName, setServiceName] = useState("");
-  const [price, setPrice] = useState();
-  const [info, setInfo] = useState("");
-  const [time, setTime] = useState();
-  const [course, setCourse] = useState([]);
-  const [show, setShow] = useState(false);
 
-  const handleServiceName = (event) => {
-    setServiceName(event.target.value);
-  }
-
-  const handlePrice = (event) => {
-    setPrice(event.target.value);
-  }
-
-  const handleInfo = (event) => {
-    setInfo(event.target.value);
-  }
-
-  const handleTime = (event) => {
-    setTime(event.target.value);
-  }
-
-  const handleCourse = (values) => {
-    const currentItems = [...course];
-
-    setCourse([...currentItems, values])
-  }
-
-  const [imagePreview, setImagePreview] = useState('');
-  const [base64Image, setBase64Image] = useState('');
-
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result);
-        setBase64Image(reader.result.split(',')[1]); // base64 데이터 추출
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleSubmit = () => {
-    const product = {
-      serviceName: serviceName,
-      price: price,
-      info: info,
-      timeTaken: 50,
-      course: course,
-      picture: base64Image
-    }
-    axios.post('http://43.202.228.228:8080/admin/addService', product)
+  useEffect(() => {
+    axios.get('http://43.202.228.228:8080/service')
     .then((res) => {
-      console.log(res)
+        console.log(res.data)
     })
     .catch((err) => {
-      console.log(err);
+        console.log(err);
     })
-  }
+  }, [])
 
-  
-  return (
-    <div className={styles.wrapper}>
-      <div>
-        <label>서비스: </label>
-        <input value={serviceName} onChange={handleServiceName} placeholder='내용을 입력하세요'/>
-      </div>
-      <div>
-        <label>가격: </label>
-        <input value={price} onChange={handlePrice} placeholder='내용을 입력하세요'/>
-      </div>
-      <div>
-        <label>시간: </label>
-        <input value={time} onChange={handleTime} placeholder='내용을 입력하세요'/>
-      </div>
-      <div>
-        <label>내용: </label>
-        <textarea value={info} onChange={handleInfo} placeholder='내용을 입력하세요'/>
-      </div>
-      <div>
-        <label>
-          업로드 할 사진 : 
-          <input type="file" accept="image/*" onChange={handleImageChange} />
-          {imagePreview && (
-          <div>
-            <img src={imagePreview} alt="Preview" style={{ maxWidth: '400px', maxHeight: '400px' }} />
-          </div>
-          )}
-        </label>
-      </div>
-      <CourseModal handleCourse={handleCourse}/>
-      <div>
-        {course.map((each) => (
-        <div style={{ maxWidth: '1200px', display: 'flex', padding: '20px', textAlign: 'center', border: '2px solid gray', borderRadius: '6px', fontSize: '18px', fontWeight: '580', color: '#444444', margin: '6px'}}>
-          <div style={{justifyContent: 'center', display: 'flex', flexDirection: 'column'}}>
-            <p style={{ maxWidth: '850px', wordBreak: 'break-all' }}>이름 : {each.courseTitle}</p>
-            <p style={{ maxWidth: '850px', wordBreak: 'break-all' }}>내용 : {each.courseInfo}</p>
-            <p style={{ maxWidth: '850px', wordBreak: 'break-all' }}>가격 : {each.price}</p>
-          </div>
-          <img src={each.imageURL} alt='코스 이미지' style={{ width: '200px', height: '150px', marginLeft: '50px' }}/>
-        </div>
-        ))}
-      </div>
-      <button onClick={handleSubmit}>submit</button>
+    return (
+    <div>
+        <div className={styles.header}>
+			<h2> 서비스 관리 </h2>
+            <div>
+				<button className={styles.button}
+						onClick={() => navigate("/service/create")}
+				>
+					생성하기
+				</button>
+			</div>
+		</div>
     </div>
   )
 }

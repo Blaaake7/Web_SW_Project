@@ -22,7 +22,7 @@ export default function Directions() {
             <PlaceIcon /> 주소 <br/><p>인천광역시 서구 청라커낼로 163</p>
           </div>
           <div className={styles.content}>
-            <DirectionsBusIcon /> 대중교통 <br/><p>701, 7700번 청라 중앙호수공원 입구 하차</p>
+            <DirectionsBusIcon /> 대중교통 <br/><p>701, 7700번 청라 중앙호수공원 입구</p>
           </div>
           <div className={styles.content}>
             <CallIcon /> 대표번호 <br/><p>0507-1358-7017</p>

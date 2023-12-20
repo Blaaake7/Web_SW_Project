@@ -2,9 +2,40 @@
     max-width: 1200px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .serviceWrapper {
-    max-width: 200px;
-    padding: 32px;
+    width: 230px;
+    height: 300px;
+    margin: 12px 32px;
+    transition: all 0.25s ease;
 }
+
+.serviceImg {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.serviceName {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.info {
+    color: #666666;
+    font-size: 14px;
+}
+
+.price {
+    color: #666666;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+  .hovered {
+    transform: scale(1.07); /* 마우스가 올라갔을 때 크기를 1.1배로 확대 */
+    /* 다른 hover 효과나 스타일을 추가로 정의할 수 있습니다 */
+  }
