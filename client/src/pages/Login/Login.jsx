@@ -34,10 +34,17 @@ export default function Login() {
       userpw: password
     })
     .then((res) => {
+      if(res.data.result == true) {
+      localStorage.setItem("userid", email);
       console.log(res);
       navigate('/');
       setLoginState(true);
       alert('로그인 되었습니다.')
+
+      }
+      else {
+      alert('계정 정보가 일치하지 않습니다.')
+      }
     })
   }
 
