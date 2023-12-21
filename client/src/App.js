@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Portfolio from './pages/Portfolio';
-import Product from './pages/Product';
 import Header from './pages/Header/Header';
 import Main from './pages/Main/Main';
 import Directions from './pages/Directions/Directions';
@@ -12,6 +11,8 @@ import SignUp from './pages/SignUp/SignUp';
 import ServiceDetail from './pages/ServiceDetail/ServiceDetail';
 import Reservation from './pages/Reservation/Reservation';
 import Board from './pages/Board/Board';
+import Product from './pages/Product/Product';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/service' element={<Service />} />
           <Route path='/service/:id' element={<ServiceDetail />} />
+
+          <Route path='/product' element={<Product />} />
+          <Route path='/product/:id' element={<ProductDetail />} />
+
           <Route path='/product' element={<Product />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signUp' element={<SignUp />} />

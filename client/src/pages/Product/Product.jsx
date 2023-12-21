@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import styles from './Service.module.css'
+import styles from './Product.module.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
-export default function Service() {
+export default function Product() {
   const [serviceData, setServiceData] = useState();
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export default function Service() {
 
   // API 연결되면 데이터 받아오기
   useEffect(() => {
-    axios.get('http://43.202.228.228:8080/service')
+    axios.get('http://43.202.228.228:8080/product')
     .then(response => {
       console.log(response.data);
       setServiceData(response.data);
@@ -30,13 +30,11 @@ export default function Service() {
   };
   
   const navToDetail = (service) => {
-    navigate(`/service/${service.serviceId}`, {
+    navigate(`/product/${service.productId}`, {
       state: {
-        serviceName: service.serviceName,
+        productName: service.productName,
         info: service.info,
         price: service.price,
-        timeTaken: service.timeTaken,
-        course: service.course,
         picture: service.picture
       },
     });
