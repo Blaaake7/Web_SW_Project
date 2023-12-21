@@ -21,6 +21,17 @@ export default function Board() {
     navigate('/board/write')
   }
   
+  const navToDetail = (boardData) => {
+    navigate(`/board/${boardData.articleId}`, {
+      state: {
+        articleId: boardData.articleId,
+        title: boardData.title,
+        content: boardData.content,
+        author: boardData.author,
+        date: boardData.date
+      },
+    })
+  }
     return (
     <div style={{maxWidth: '1200px', margin: 'auto'}}>
       <h2 style={{textAlign: "center", marginTop: "100px"}}>게시판</h2>
@@ -39,8 +50,8 @@ export default function Board() {
         </div>
       </div>
         {boardData && boardData.map((each, idx) => (
-            <div key={idx} style={{ margin: "21px 0", display: "flex", justifyContent: "center", marginBottom: "10px" }}>
-              <div style={{width: "230px"}}>
+            <div  key={idx} style={{ margin: "21px 0", display: "flex", justifyContent: "center", marginBottom: "10px" }}>
+              <div onClick={() => navToDetail(boardData[idx])} style={{width: "230px"}}>
                 {each.title}
               </div>
               <div style={{marginLeft: "18px", width: "80px" }}>
