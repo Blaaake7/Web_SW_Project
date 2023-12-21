@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Header.module.css'
 import { useNavigate } from 'react-router-dom'
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { loginState } from '../atom';
+import axios from 'axios';
 
 export default function Header() {
 
+    const isLoggedIn = useRecoilValue(loginState);
+    const setLoginState = useSetRecoilState(loginState);
+
     const navigate = useNavigate();
-    const [login, setLogin] = useState(false);
 
     const navToPage = (event) => {
         const targetDiv = event.target.id;
         navigate(`/${targetDiv}`);
     }
 
-    useEffect(() => {
-        const loginStatus = localStorage.getItem('login');
-        setLogin(loginStatus === 'true');
-    }, []);
-
     const handleLogin = () => {
-        if (login) {
-            localStorage.setItem('login', 'false');
-            setLogin(false);
-            alert('로그아웃 되었습니다!')
+        if (isLoggedIn) {
+            axios.post('http://43.202.228.228:8080/logout');
+            setLoginState(false);
+            alert('로그아웃 되었습니다!');
         }
         else {
-            navigate('/login')
+            navigate('/login');
         }
     }
 
@@ -35,7 +35,7 @@ export default function Header() {
         </div>
         <div className={styles.rightBox}>
             <button id='login' className="headerBtn" onClick={handleLogin}>
-                {login ? '로그아웃' : '로그인'}
+                {isLoggedIn ? '로그아웃' : '로그인'}
             </button>
             <button id='directions' className="headerBtn" onClick={navToPage}>
                 오시는 길

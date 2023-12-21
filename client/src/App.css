@@ -379,3 +379,11 @@
   align-items: baseline;
   margin: auto;
 }
+
+.reserveModalInput {
+  height: 20px;
+}
+
+.reserveModalBtn {
+  font-size: 18px;
+}

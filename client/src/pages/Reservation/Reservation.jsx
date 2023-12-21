@@ -39,11 +39,14 @@ export default function Reservation({customerName, date, phoneNumber, handleCust
             예약을 위해 고객님의 인적사항을 입력해주세요
           </Typography>
         <div style={{display: "flex", flexDirection: "column"}}>
-            <input type='date' value={date} onChange={(e) => handleDate(e)} style={{width: "120px", margin: "12px"}}/>
-            <input type='text' value={customerName} onChange={(e) => handleCustomerName(e)} style={{margin: "12px"}}/>
-            <input type='text' value={phoneNumber} onChange={(e) => handlePhoneNumber(e)} style={{margin: "12px"}}/>
+            <label style={{marginTop: "12px", fontWeight: "550"}}>날짜</label>
+              <input type='date' value={date} onChange={(e) => handleDate(e)} style={{width: "120px", margin: "12px"}} className='reserveModalInput'/>
+            <label style={{marginTop: "12px", fontWeight: "550"}}>성함</label>
+              <input type='text' value={customerName} onChange={(e) => handleCustomerName(e)} style={{margin: "12px"}} className='reserveModalInput'/>
+            <label style={{marginTop: "12px", fontWeight: "550"}}>전화번호</label>
+              <input type='text' value={phoneNumber} onChange={(e) => handlePhoneNumber(e)} style={{margin: "12px"}} className='reserveModalInput'/>
         </div>
-        <div style={{textAlign: "right", marginRight: "16px"}}>
+        <div style={{textAlign: "right", marginRight: "16px"}} className='reserveModalBtn'>
             <button>예약 완료</button>
         </div>
         </Box>

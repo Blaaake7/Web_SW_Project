@@ -13,10 +13,13 @@ import Reservation from './pages/Reservation/Reservation';
 import Board from './pages/Board/Board';
 import Product from './pages/Product/Product';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
+import BoardWrite from './pages/Board/BoardWrite';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
     <div className="App">
+      <RecoilRoot>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -34,9 +37,11 @@ function App() {
           <Route path='/signUp' element={<SignUp />} />
           <Route path='/reserve' element={<Reservation />} />
           <Route path='/board' element={<Board />} />
+          <Route path='/board/write' element={<BoardWrite />} />
         </Routes>
         <Footer />
       </BrowserRouter>
+      </RecoilRoot>
     </div>
   );
 }

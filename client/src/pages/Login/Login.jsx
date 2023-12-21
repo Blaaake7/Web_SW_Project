@@ -7,8 +7,14 @@ import GoogleIcon from "@mui/icons-material/Google";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from '../../Image/logo.jpg'
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { loginState } from '../atom';
 
 export default function Login() {
+
+  const isLoggedIn = useRecoilValue(loginState);
+  const setLoginState = useSetRecoilState(loginState);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -29,14 +35,14 @@ export default function Login() {
     })
     .then((res) => {
       console.log(res);
-      localStorage.setItem('login', res.data.result);
       navigate('/');
+      setLoginState(true);
+      alert('로그인 되었습니다.')
     })
   }
 
   return (
       <div className="login_body">
-        <form className="login" action="/loginURL" method="post">
           <div className="amuse_login_title">
             <img
               className="amuse_logo"
@@ -59,7 +65,6 @@ export default function Login() {
               <i className="fa-solid fa-door-open"></i>로그인
             </button>
           </div>
-        </form>
         <div className="v_box">
           <div className="login_function_box">
             <div className="signup_box">
