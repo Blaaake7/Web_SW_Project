@@ -32,7 +32,7 @@ export default function BoardWrite() {
     <div style={{padding: "50px", maxWidth: "1000px", margin: "auto"}}>
         <h2>게시판 글쓰기</h2>
         <div style={{display: "flex", flexDirection: "column"}}>
-            <input value={title} onChange={handleTitle} placeholder='제목' style={{width: "450px", height: "32px", marginTop: "18px"}}/>
+            <input value={title} onChange={handleTitle} placeholder='제목' style={{width: "95%", height: "32px", marginTop: "18px"}}/>
             <textarea value={content} onChange={handleContent} placeholder='내용' style={{height: "300px", marginTop: "40px"}}/>
             <button style={{width: "180px", marginTop: "24px"}} onClick={handleWrite}>작성 완료</button>
         </div>

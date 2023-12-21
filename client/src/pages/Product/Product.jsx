@@ -51,7 +51,7 @@ export default function Product() {
         onClick={() => navToDetail(service)}
       >
           <img src={service.picture} alt='Service Image' className={styles.serviceImg} />
-          <div key={idx} className={styles.serviceName}>{service.serviceName}</div>
+          <div key={idx} className={styles.serviceName}>{service.productName}</div>
           <div key={idx} className={styles.info}>{service.info.length > 18 ? `${service.info.substring(0, 18)}...` : service.info}</div>
           <div key={idx} className={styles.price}>{service.price}원</div>
         </div>

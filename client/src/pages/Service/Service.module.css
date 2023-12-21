@@ -11,12 +11,19 @@
     height: 300px;
     margin: 12px 32px;
     transition: all 0.25s ease;
+    @media (max-width: 450px) {
+        text-align: center;
+      }
 }
 
 .serviceImg {
     width: 200px;
     height: 200px;
     margin-bottom: 16px;
+
+    @media (max-width: 450px) {
+        text-align: center;
+      }
 }
 
 .serviceName {

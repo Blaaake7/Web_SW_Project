@@ -1,0 +1,128 @@
+/* ServiceDetail.module.css */
+
+.container {
+    white-space: pre;
+    margin: 105px 0;
+    position: relative;
+  }
+  
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .serviceImage {
+    width: 370px;
+    height: 400px;
+  }
+  
+  .details {
+    margin-left: 70px;
+  }
+  
+  .details p {
+    font-weight: 550;
+    font-size: 17px;
+    margin: 10px 0;
+  }
+  
+  .courseContainer {
+    background-color: rgb(248, 249, 250);
+    border-radius: 6px;
+    margin: 12px;
+    padding: 8px;
+    display: flex;
+    width: 600px;
+  }
+  
+  .courseImage {
+    width: 190px;
+    height: 130px;
+    border-radius: 8px;
+  }
+  
+  .courseInfo {
+    margin-left: 12px;
+    border-left: 3.5px solid lightgray;
+    padding-left: 10px;
+    width: 370px;
+    white-space: normal;
+  }
+  
+  .reservationButton {
+    position: absolute;
+    top: 8px;
+    right: 25%;
+    background-color: #fff7d1;
+    cursor: pointer;
+    border: 1px lightgray solid;
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 6px 8px;
+  }
+
+  @media (max-width: 450px) {
+    .container {
+      white-space: pre;
+      margin: 20px 0;
+      position: relative;
+    }
+  
+    .imageWrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .serviceImage {
+        width: 65%;
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 20px;
+        margin: 0 auto; /* Center the image */
+    }
+  
+    .details {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .courseContainer {
+      background-color: rgb(248, 249, 250);
+      border-radius: 6px;
+      /* margin: 12px;
+      padding: 8px; */
+      display: flex;
+      flex-direction: column;
+      width: 88%;
+    }
+  
+    .courseImage {
+      width: 65%;
+      max-width: 180px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+
+      margin: 0 auto; /* Center the image */
+    }
+  
+    .courseInfo {
+      margin-left: 0;
+      border-left: none;
+      padding-left: 0;
+      width: 100%;
+      white-space: normal;
+    }
+  
+    .reservationButton {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-top: 20px;
+    }
+
+    .longInfo {
+        display: none;
+      }
+  
+  }
