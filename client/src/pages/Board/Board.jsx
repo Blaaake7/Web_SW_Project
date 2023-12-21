@@ -46,7 +46,7 @@ export default function Board() {
       {boardData &&
         boardData.map((each, idx) => (
           <div key={idx} className={styles.itemContainer}>
-            <div className={styles.itemTitle}>{each.title}</div>
+            <div onClick={() => navToDetail(boardData[idx])} className={styles.itemTitle}>{each.title}</div>
             <div className={styles.itemAuthor}>{each.author}</div>
             <div className={styles.itemDate}>{each.date}</div>
           </div>
