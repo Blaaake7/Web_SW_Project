@@ -1,0 +1,72 @@
+/* Board.module.css */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .title {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .buttonContainer {
+    text-align: right;
+    margin-right: 180px;
+    margin-top: 48px;
+    margin-bottom: 64px;
+    @media (max-width: 450px) {
+        margin-right: 18px;
+      }
+  }
+  
+  .button {
+    margin-left: auto;
+    padding: 3px 12px;
+  }
+  
+  .header {
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: 550;
+  }
+  
+  .itemContainer {
+    margin: 21px 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    @media (max-width: 450px) {
+        margin: 21px 12px;
+      }
+  }
+  
+  .itemTitle {
+    width: 230px;
+
+    @media (max-width: 450px) {
+        width: 50%;
+      }
+  }
+  
+  .itemAuthor {
+    margin-left: 18px;
+    width: 80px;
+
+    @media (max-width: 450px) {
+        margin-left: 6px;
+        width: 30%;
+      }
+  }
+  
+  .itemDate {
+    margin-left: 18px;
+    width: 170px;
+
+    @media (max-width: 450px) {
+        margin-left: 6px;
+        width: 30%;
+      }
+  }

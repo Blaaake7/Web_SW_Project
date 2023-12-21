@@ -1,0 +1,46 @@
+/* ProductDetail.css */
+
+.productDetailContainer {
+    white-space: pre;
+    margin: 105px 0;
+    position: relative;
+    
+  }
+  
+.asdf {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 450px) {
+        flex-direction: column;
+    }
+}
+
+  .productImage {
+    width: 370px;
+    height: 400px;
+
+    @media (max-width: 450px) {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+  }
+  
+  .productDetails {
+    margin-left: 70px;
+    word-break: break-all; /* 추가한 부분 */
+
+    @media (max-width: 450px) {
+        margin-left: 10px;
+    }
+  }
+  
+  .productDetails p span{
+    font-size: 17px;
+    font-weight: 550;
+  }
+
+  .productDetails p span {
+    display: block;
+    overflow-wrap: break-word;
+  }

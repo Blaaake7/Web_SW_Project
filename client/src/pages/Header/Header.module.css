@@ -4,6 +4,10 @@
     padding: 12px 130px;
     background-color: #FAF0E6;
     margin-bottom: 30px;
+
+    @media (max-width: 450px) {
+        padding: 8px 20px;
+      }
 }
 
 .leftBox {
@@ -11,6 +15,10 @@
     font-size: 24px;
     cursor: pointer;
     color: #222222;
+
+    @media (max-width: 450px) {
+        font-size: 18px;
+      }
 }
 
 .rightBox {

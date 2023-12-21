@@ -11,6 +11,10 @@
     height: 300px;
     margin: 12px 32px;
     transition: all 0.25s ease;
+
+    @media (max-width: 450px) {
+        text-align: center;
+      }
 }
 
 .serviceImg {

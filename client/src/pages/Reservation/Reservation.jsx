@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import styles from './Reservation.module.css'
 
 const style = {
   position: 'absolute',
@@ -23,7 +24,7 @@ export default function Reservation({customerName, date, phoneNumber, handleCust
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Button onClick={handleOpen}>예약하기</Button>
       <Modal
         open={open}

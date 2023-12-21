@@ -387,3 +387,21 @@
 .reserveModalBtn {
   font-size: 18px;
 }
+
+@media (max-width: 450px) {
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .about__icon {
+    margin: 0 auto;
+  }
+
+  .category__btn {
+    padding: 4px 6px;
+  }
+
+  .signup_box {
+    font-size: 14px;
+  }
+}

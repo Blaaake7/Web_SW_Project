@@ -18,7 +18,9 @@ export default function PasswordInput({ password, handleChangePassword, flag }) 
     };
   
   return (
-    <FormControl sx={{ m: 1, width: '490px' }} variant="standard">
+    <FormControl sx={{ m: 1, width: '490px', '@media (max-width: 450px)': {
+      width: '100%', // Set width to 60% on screens with a max width of 600px (adjust the value accordingly)
+    }, }} variant="standard">
     <InputLabel htmlFor="standard-adornment-password">{flag ? 'Password' : 'Password Check'}</InputLabel>
     <Input
       id="standard-adornment-password"

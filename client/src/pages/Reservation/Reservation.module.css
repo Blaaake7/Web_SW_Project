@@ -1,0 +1,17 @@
+/* Reservation.module.css */
+
+.reserveModalInput {
+    width: 120px;
+    margin: 12px;
+  }
+  
+  .reserveModalBtn {
+    text-align: right;
+    margin-right: 16px;
+  }
+
+  @media (max-width: 500px) {
+    .wrapper {
+      width: 80%;
+    }
+  }
