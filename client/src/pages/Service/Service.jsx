@@ -30,8 +30,10 @@ export default function Service() {
   };
   
   const navToDetail = (service) => {
+    console.log(service.serviceId);
     navigate(`/service/${service.serviceId}`, {
       state: {
+        serviceId: service.serviceId,
         serviceName: service.serviceName,
         info: service.info,
         price: service.price,

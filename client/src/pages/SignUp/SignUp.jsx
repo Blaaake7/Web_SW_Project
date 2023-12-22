@@ -59,7 +59,11 @@ export default function SignUp() {
       userid: email,
       userpw: password
     }
-    axios.post('https://webserver.naildelluna.shop/register', info)
+    axios.post('http://43.202.228.228:8080/register', info)
+    .then((res) => {
+      alert('회원가입이 완료 되었습니다')
+      navigate('/');
+    })
   }
 
   return (

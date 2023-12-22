@@ -55,7 +55,7 @@ export default function Product() {
 		  </div>
       {data && data.map((each, idx) => (
         <div key={idx} style={{display: "flex", margin: "24px 250px", border: "1px solid gray", padding: "20px"}}>
-          <img src={each.picture} alt='서비스 이미지' style={{marginLeft: "48px"}}/> 
+          <img src={each.picture} alt='서비스 이미지' style={{marginLeft: "48px", width: "200px", height: "200px"}}/> 
           <div style={{marginLeft: "48px"}}>
             <div>
               {each.productName}
