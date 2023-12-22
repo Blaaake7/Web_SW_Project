@@ -113,56 +113,56 @@ export default function Portfolio() {
         </div>
 
         <div class="work__projects">
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="front-end">
+            <a href="https://www.instagram.com/p/CypBmbFyW7D/" class="project" target="_blank" data-type="front-end">
                 <img src={project1} alt="Github" class="project__img" data-type="front-end"/>
                 <div class="project__description">
                     <h3>젤 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="back-end">
+            <a href="https://www.instagram.com/p/CxPjyg-yVXJ/" class="project" target="_blank" data-type="back-end">
                 <img src={project2} alt="Github2" class="project__img"/>
                 <div class="project__description">
                     <h3>일반 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://lms.kau.ac.kr/" class="project" target="_blank" data-type="mobile">
+            <a href="https://www.instagram.com/p/CwtgUIESjX7/" class="project" target="_blank" data-type="mobile">
                 <img src={project3} alt="KAU LMS" class="project__img"/>
                 <div class="project__description">
                     <h3>큐빅 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://blog.naver.com/leesu0229" class="project" target="_blank" data-type="front-end">
+            <a href="https://www.instagram.com/p/Cu0poYqSaMV/" class="project" target="_blank" data-type="front-end">
                 <img src={project4} alt="NAVER blog" class="project__img"/>
                 <div class="project__description">
                     <h3>젤 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="mobile">
+            <a href="https://www.instagram.com/p/CrkXexyS7pE/?img_index=1" class="project" target="_blank" data-type="mobile">
                 <img src={project5} alt="Github" class="project__img"/>
                 <div class="project__description">
                     <h3>큐빅 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="front-end">
+            <a href="https://www.instagram.com/p/CrAOevpyGZR/" class="project" target="_blank" data-type="front-end">
                 <img src={project6} alt="Github" class="project__img"/>
                 <div class="project__description">
                     <h3>젤 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="back-end">
+            <a href="https://www.instagram.com/p/CqCccztShc7/" class="project" target="_blank" data-type="back-end">
                 <img src={project7} alt="Github" class="project__img"/>
                 <div class="project__description">
                     <h3>일반 네일</h3>
                     <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="back-end">
+            <a href="https://www.instagram.com/p/CpwKEXmynBO/?img_index=1" class="project" target="_blank" data-type="back-end">
                 <img src={project8} alt="Github" class="project__img"/>
                 <div class="project__description">
                     <h3>일반 네일</h3>
