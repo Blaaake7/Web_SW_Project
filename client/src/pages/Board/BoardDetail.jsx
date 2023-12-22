@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import styles from './BoardDetail.module.css';
 
 
 export default function BoardDetail() {
@@ -17,6 +18,6 @@ export default function BoardDetail() {
                 <p>작성자   <span style={{ fontWeight: "550", fontSize: "17px" }}>{author}</span></p>
                 <p>작성 시간  <span style={{ fontWeight: "550", fontSize: "17px" }}>{date}</span></p>
             </div>
-        </div>
+        </div >
     )
 }

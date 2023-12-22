@@ -6,6 +6,7 @@ import styles from './Board.module.css';
 
 export default function Board() {
   const [boardData, setBoardData] = useState();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     axios.get('http://43.202.228.228:8080/board').then((res) => {
@@ -30,6 +31,14 @@ export default function Board() {
     navigate('/board/write')
   }
 
+  const handleMouseEnter = (idx) => {
+    setHoveredIndex(idx);
+  }
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  }
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>게시판</h2>
@@ -45,8 +54,13 @@ export default function Board() {
       </div>
       {boardData &&
         boardData.map((each, idx) => (
-          <div key={idx} className={styles.itemContainer}>
-            <div onClick={() => navToDetail(boardData[idx])} className={styles.itemTitle}>{each.title}</div>
+          <div key={idx} className={`${styles.itemContainer} ${hoveredIndex === idx ? styles.hovered : ''}`}
+            onMouseEnter={() => handleMouseEnter(idx)}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => navToDetail(boardData[idx])}
+
+          >
+            <div className={styles.itemTitle}>{each.title}</div>
             <div className={styles.itemAuthor}>{each.author}</div>
             <div className={styles.itemDate}>{each.date}</div>
           </div>
