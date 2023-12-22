@@ -6,7 +6,7 @@ import styles from './ServiceDetail.module.css';
 
 export default function ServiceDetail() {
   const location = useLocation();
-  const { serviceName, info, price, timeTaken, course, picture } = location.state;
+  const { serviceId, serviceName, info, price, timeTaken, course, picture } = location.state;
   const navigate = useNavigate();
 
   const [customerName, setCustomerName] = React.useState('');
@@ -59,12 +59,14 @@ export default function ServiceDetail() {
           ))}
         </div>
         <Reservation
+          serviceId={serviceId}
           customerName={customerName}
           date={date}
           phoneNumber={phoneNumber}
           handleCustomerName={handleCustomerName}
           handleDate={handleDate}
           handlePhoneNumber={handlePhoneNumber}
+          course={course}
           className={styles.reservationButton}
         />
       </div>

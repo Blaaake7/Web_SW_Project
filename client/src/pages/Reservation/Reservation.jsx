@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import styles from './Reservation.module.css'
+import axios from "axios";
 
 const style = {
   position: 'absolute',
@@ -17,11 +18,36 @@ const style = {
   p: 4,
 };
 
-export default function Reservation({customerName, date, phoneNumber, handleCustomerName, handleDate, handlePhoneNumber}) {
+export default function Reservation({serviceId, customerName, date, phoneNumber, handleCustomerName, handleDate, handlePhoneNumber, course}) {
   
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleReservation = () => {
+    let courseId = [];
+    course.map((each) => {
+      courseId.push(each.courseId)
+    })
+
+    const reservation = {
+      serviceId: serviceId,
+      customerName: customerName,
+      phoneNumber: phoneNumber,
+      date: date,
+      courseId: courseId,
+      totalPrice: 30000
+    }
+
+    console.log(reservation)
+    axios.post('http://43.202.228.228:8080/reservation', reservation)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((res) => {
+      console.log(res);
+    });
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -48,7 +74,7 @@ export default function Reservation({customerName, date, phoneNumber, handleCust
               <input type='text' value={phoneNumber} onChange={(e) => handlePhoneNumber(e)} style={{margin: "12px"}} className='reserveModalInput'/>
         </div>
         <div style={{textAlign: "right", marginRight: "16px"}} className='reserveModalBtn'>
-            <button>예약 완료</button>
+            <button onClick={handleReservation}>예약 완료</button>
         </div>
         </Box>
       </Modal>
