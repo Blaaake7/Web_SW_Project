@@ -6,6 +6,7 @@ import Header from './pages/Header/Header';
 import Main from './pages/Main/Main';
 import Service from './pages/Service/Service';
 import ServiceCreate from './pages/Service/ServiceCreate';
+import ProductCreate from './pages/ProductCreate';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/service' element={<Service />} />
           <Route path='/service/create' element={<ServiceCreate />} />
           <Route path='/product' element={<Product />} />
+          <Route path='/product/create' element={<ProductCreate />} />
           <Route path='/reservation' element={<Reservation />} />
         </Routes>
       </BrowserRouter>
