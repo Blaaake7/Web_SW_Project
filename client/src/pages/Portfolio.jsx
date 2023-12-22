@@ -113,60 +113,60 @@ export default function Portfolio() {
         </div>
 
         <div class="work__projects">
-            <a href="https://github.com/Blaaake7" class="project" target="_blank">
+            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="front-end">
                 <img src={project1} alt="Github" class="project__img" data-type="front-end"/>
                 <div class="project__description">
-                    <h3>Github</h3>
-                    <span class="each__description">Visit my github, and see the projects</span>
+                    <h3>젤 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
             <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="back-end">
                 <img src={project2} alt="Github2" class="project__img"/>
                 <div class="project__description">
-                    <h3>Github2</h3>
-                    <span class="each__description">I did Android project with Kotlin</span>
+                    <h3>일반 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://lms.kau.ac.kr/" class="project" target="_blank" data-type="back-end">
+            <a href="https://lms.kau.ac.kr/" class="project" target="_blank" data-type="mobile">
                 <img src={project3} alt="KAU LMS" class="project__img"/>
                 <div class="project__description">
-                    <h3>KAU LMS</h3>
-                    <span class="each__description">Visit Lms and see my GPA</span>
+                    <h3>큐빅 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
             <a href="https://blog.naver.com/leesu0229" class="project" target="_blank" data-type="front-end">
                 <img src={project4} alt="NAVER blog" class="project__img"/>
                 <div class="project__description">
-                    <h3>Blog</h3>
-                    <span class="each__description">Visit my blog, and see the projects</span>
+                    <h3>젤 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
             <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="mobile">
                 <img src={project5} alt="Github" class="project__img"/>
                 <div class="project__description">
-                    <h3>Github</h3>
-                    <span class="each__description">Visit my github, and see the projects</span>
+                    <h3>큐빅 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
             <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="front-end">
                 <img src={project6} alt="Github" class="project__img"/>
                 <div class="project__description">
-                    <h3>Github</h3>
-                    <span class="each__description">Visit my github, and see the projects</span>
+                    <h3>젤 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
-            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="mobile">
+            <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="back-end">
                 <img src={project7} alt="Github" class="project__img"/>
                 <div class="project__description">
-                    <h3>Github</h3>
-                    <span class="each__description">Visit my github, and see the projects</span>
+                    <h3>일반 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
             <a href="https://github.com/Blaaake7" class="project" target="_blank" data-type="back-end">
                 <img src={project8} alt="Github" class="project__img"/>
                 <div class="project__description">
-                    <h3>Github</h3>
-                    <span class="each__description">Visit my github, and see the projects</span>
+                    <h3>일반 네일</h3>
+                    <span class="each__description">클릭해 자세히 확인해보세요!</span>
                 </div>
             </a>
         </div>

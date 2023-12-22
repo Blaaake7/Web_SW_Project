@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import styles from './Reservation.module.css'
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -23,6 +24,7 @@ export default function Reservation({serviceId, customerName, date, phoneNumber,
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const navigate = useNavigate();
 
   const handleReservation = () => {
     let courseId = [];
@@ -47,6 +49,8 @@ export default function Reservation({serviceId, customerName, date, phoneNumber,
     .catch((res) => {
       console.log(res);
     });
+    alert('예약을 완료했습니다')
+    navigate('/service');
   }
 
   return (
