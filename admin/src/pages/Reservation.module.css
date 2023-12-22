@@ -1,0 +1,47 @@
+.reservationContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+  
+  .reservationItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    width: 650px;
+  }
+  
+  .indexColumn {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  .infoColumn {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 20px;
+  }
+  
+  .customerInfo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px; /* 조금 더 큰 여백을 추가합니다. */
+  }
+  
+  .phoneNumber {
+    font-size: 18px;
+    margin-right: 20px; /* 이름과 전화번호 사이의 간격을 조절합니다. */
+  }
+  
+  .dateColumn {
+    flex-basis: 150px;
+  }
+  
+  .priceColumn {
+    flex-basis: 100px;
+    font-weight: bold;
+    color: #eb1749;
+  }
