@@ -19,6 +19,7 @@ export default function Reservation() {
       {data && data.map((each, idx) => (
         <div key={idx} className={styles.reservationItem}>
           <div className={styles.indexColumn}>{idx + 1}.</div>
+          <div className={styles.serviceInfo}>{each.serviceName}</div>
           <div className={styles.infoColumn}>
             <div className={styles.customerInfo}>{each.customerName}</div>
           </div>
