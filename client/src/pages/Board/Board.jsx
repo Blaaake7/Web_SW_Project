@@ -3,9 +3,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Board.module.css';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { loginState } from '../atom';
 
 export default function Board() {
   const [boardData, setBoardData] = useState();
+  const isLoggedIn = useRecoilValue(loginState);
+  const setLoginState = useSetRecoilState(loginState);
 
   useEffect(() => {
     axios.get('http://43.202.228.228:8080/board').then((res) => {
@@ -17,7 +21,15 @@ export default function Board() {
   const navigate = useNavigate();
 
   const navToWrite = () => {
-    navigate('/board/write');
+    if(isLoggedIn == true) {
+      navigate('/board/write');
+    }
+    else {
+      alert('로그인이 필요합니다')
+      navigate('/login');
+    }
+
+    
   };
 
   return (
