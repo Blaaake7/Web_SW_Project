@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import styles from './ServiceCreate.module.css'
+import styles from './ProductCreate.module.css'
 import axios from 'axios'
-import CourseModal from './CourseInfo/CourseModal';
-
 import { useNavigate } from 'react-router-dom'
-export default function ServiceCreate() {
+
+
+export default function ProductCreate() {
 
   const [serviceName, setServiceName] = useState("");
   const [price, setPrice] = useState();
@@ -12,8 +12,6 @@ export default function ServiceCreate() {
   const [time, setTime] = useState();
   const [course, setCourse] = useState([]);
   const [show, setShow] = useState(false);
-
-  const navigate = useNavigate();
 
   const handleServiceName = (event) => {
     setServiceName(event.target.value);
@@ -37,6 +35,8 @@ export default function ServiceCreate() {
     setCourse([...currentItems, values])
   }
 
+  const navigate = useNavigate();
+
   const [imagePreview, setImagePreview] = useState('');
   const [base64Image, setBase64Image] = useState('');
 
@@ -54,20 +54,17 @@ export default function ServiceCreate() {
 
   const handleSubmit = () => {
     const product = {
-      serviceName: serviceName,
+      productName: serviceName,
       price: price,
       info: info,
-      timeTaken: time,
-      course: course,
       picture: imagePreview
     }
 
-    console.log(product);
-    axios.post('http://43.202.228.228:8080/admin/addService', product)
+    axios.post('http://43.202.228.228:8080/admin/addProduct', product)
     .then((res) => {
-      console.log(res);
-      alert('작성 완료되었습니다!')
-      navigate('/service');
+      console.log(res)
+      alert('추가되었습니다.');
+      navigate('/product')
     })
     .catch((err) => {
       console.log(err);
@@ -78,7 +75,7 @@ export default function ServiceCreate() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.category}>
-        <label>서비스 </label>
+        <label>상품명 </label>
         <input value={serviceName} onChange={handleServiceName} placeholder='내용을 입력하세요'/>
       </div>
       <div className={styles.category}>
@@ -86,11 +83,7 @@ export default function ServiceCreate() {
         <input value={price} onChange={handlePrice} placeholder='내용을 입력하세요'/>
       </div>
       <div className={styles.category}>
-        <label>시간 </label>
-        <input value={time} onChange={handleTime} placeholder='내용을 입력하세요'/>
-      </div>
-      <div className={styles.category}>
-        <label>내용 </label>
+        <label>설명 </label>
         <br/>
         <textarea value={info} onChange={handleInfo} placeholder='내용을 입력하세요'/>
       </div>
@@ -106,7 +99,6 @@ export default function ServiceCreate() {
           )}
         </label>
       </div>
-      <CourseModal handleCourse={handleCourse}/>
       <div>
         {course.map((each) => (
         <div style={{ maxWidth: '1200px', display: 'flex', padding: '20px', textAlign: 'center', border: '2px solid gray', borderRadius: '6px', fontSize: '18px', fontWeight: '580', color: '#444444', margin: '6px', justifyContent: 'space-between'}}>
