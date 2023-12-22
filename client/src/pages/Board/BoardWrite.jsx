@@ -20,7 +20,8 @@ export default function BoardWrite() {
   const handleWrite = () => {
     axios.post('http://43.202.228.228:8080/board/write', {
         title: title,
-        content: content
+        content: content,
+        author: localStorage.getItem("userid")
     })
     .then((res) => {
         console.log(res.data)

@@ -34,6 +34,9 @@
     justify-content: center;
     margin-bottom: 10px;
     font-weight: 550;
+    border-bottom: solid black 2px;
+    margin-left:25%;
+    width:50%;
   }
   
   .itemContainer {
@@ -72,4 +75,9 @@
         margin-left: 6px;
         width: 30%;
       }
+  }
+
+  .hovered {
+    transform: scale(1.02); /* 마우스가 올라갔을 때 크기를 1.1배로 확대 */
+    /* 다른 hover 효과나 스타일을 추가로 정의할 수 있습니다 */
   }

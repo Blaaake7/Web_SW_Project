@@ -54,41 +54,47 @@ export default function SignUp() {
     }
   }, [password, passwordCheck]);
 
+  const handleSignUp = () => {
+    const info = {
+      userid: email,
+      userpw: password
+    }
+    axios.post('https://webserver.naildelluna.shop/register', info)
+  }
+
   return (
       <div className="login_body">
-        <form className="login" action="/loginURL" method="post">
-          <div className="amuse_login_title">
-            <img
-              className="amuse_logo"
-              src={logo}
-              alt="어뮤즈 이미지"
-            />
-            <h2 className="amuse_title_top">회원가입</h2>
-            <h2 className="amuse_title_bottom">네일 델루나</h2>
+        <div className="amuse_login_title">
+          <img
+            className="amuse_logo"
+            src={logo}
+            alt="어뮤즈 이미지"
+          />
+          <h2 className="amuse_title_top">회원가입</h2>
+          <h2 className="amuse_title_bottom">네일 델루나</h2>
+        </div>
+        <div className="input">
+          <div className="email">
+            <EmailInput email={email} handleChangeEmail={handleChangeEmail} />
           </div>
-          <div className="input">
-            <div className="email">
-              <EmailInput email={email} handleChangeEmail={handleChangeEmail} />
-            </div>
-            <div className="password">
-              <PasswordInput password={password} handleChangePassword={handleChangePassword} flag={true}/>
-            </div>
-            <p style={{color: "red", fontWeight: "550", fontSize: "13px"}}>
-            {pwdIsRegex ? "" : "비밀번호는 8자리 이상이며, 적어도 하나의 숫자와 특수문자를 포함해야합니다."}
-            </p>
-            <div className="password">
-              <PasswordInput password={passwordCheck} handleChangePassword={handleChangePasswordCheck} />
-            </div>
-            <p style={{color: "red", fontWeight: "550", fontSize: "13px"}}>
-            {pwdFlage ? "" : "입력하신 비밀번호가 다릅니다."}
-            </p>
+          <div className="password">
+            <PasswordInput password={password} handleChangePassword={handleChangePassword} flag={true}/>
           </div>
-          <div className="login_btn_box">
-            <button className="login_btn">
-              <i className="fa-solid fa-door-open"></i>회원가입
-            </button>
+          <p style={{color: "red", fontWeight: "550", fontSize: "13px"}}>
+          {pwdIsRegex ? "" : "비밀번호는 8자리 이상이며, 적어도 하나의 숫자와 특수문자를 포함해야합니다."}
+          </p>
+          <div className="password">
+            <PasswordInput password={passwordCheck} handleChangePassword={handleChangePasswordCheck} />
           </div>
-        </form>
+          <p style={{color: "red", fontWeight: "550", fontSize: "13px"}}>
+          {pwdFlage ? "" : "입력하신 비밀번호가 다릅니다."}
+          </p>
+        </div>
+        <div className="login_btn_box">
+          <button className="login_btn" onClick={handleSignUp}>
+            <i className="fa-solid fa-door-open"></i>회원가입
+          </button>
+        </div>
         <div className="v_box">
           <div className="login_function_box">
             <div className="signup_box">

@@ -14,33 +14,35 @@ import Board from './pages/Board/Board';
 import Product from './pages/Product/Product';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import BoardWrite from './pages/Board/BoardWrite';
+import BoardDetail from './pages/Board/BoardDetail';
 import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
     <div className="App">
       <RecoilRoot>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='/directions' element={<Directions />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/service' element={<Service />} />
-          <Route path='/service/:id' element={<ServiceDetail />} />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Main />} />
+            <Route path='/directions' element={<Directions />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/service' element={<Service />} />
+            <Route path='/service/:id' element={<ServiceDetail />} />
 
-          <Route path='/product' element={<Product />} />
-          <Route path='/product/:id' element={<ProductDetail />} />
+            <Route path='/product' element={<Product />} />
+            <Route path='/product/:id' element={<ProductDetail />} />
 
-          <Route path='/product' element={<Product />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signUp' element={<SignUp />} />
-          <Route path='/reserve' element={<Reservation />} />
-          <Route path='/board' element={<Board />} />
-          <Route path='/board/write' element={<BoardWrite />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+            <Route path='/product' element={<Product />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signUp' element={<SignUp />} />
+            <Route path='/reserve' element={<Reservation />} />
+            <Route path='/board' element={<Board />} />
+            <Route path='/board/write' element={<BoardWrite />} />
+            <Route path='/board/:id' element={<BoardDetail />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </RecoilRoot>
     </div>
   );
